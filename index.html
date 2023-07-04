@@ -41,15 +41,17 @@
         justify-content: center;
         align-items: center;
       }
-      .product img {
+      .desktop {
         width: 300px;
         border-radius: 0.5rem 0rem 0rem 0.5rem;
+      }
+      .mobile {
+        display: none;
       }
       .component {
         font-family: "Montserrat", sans-serif;
         width: 600px;
         border: none;
-        border-radius: 0.5rem;
         align-items: center;
         justify-content: center;
       }
@@ -68,7 +70,7 @@
         color: hsl(212, 21%, 14%);
       }
       .top {
-        margin-bottom: 0.95rem;
+        margin-bottom: 0.85rem;
         letter-spacing: 7px;
         text-transform: uppercase;
         font-size: 12px;
@@ -95,8 +97,8 @@
         color: white;
         border: none;
         border-radius: 0.5rem;
-        padding: 0.4rem 1rem;
-
+        padding: 0.5rem 1rem;
+        font-size: 14px;
         font-family: "Montserrat", sans-serif;
         width: 95%;
         margin: 1.2rem 0.5rem 0.8rem 0.5rem;
@@ -105,19 +107,53 @@
         align-items: center;
         gap: 0.8rem;
       }
+      @media (max-width: 375px) {
+        .wrapper {
+          justify-content: space-around;
+          align-items: flex-start;
+          height: auto;
+        }
+        .component {
+          flex-direction: column;
+          padding: 1rem;
+        }
+        .mobile {
+          display: block;
+          width: 100%;
+          border-radius: 0.5rem 0.5rem 0rem 0rem;
+        }
+        .desktop {
+          display: none;
+        }
+
+        .review {
+          border-radius: 0rem 0rem 0.5rem 0.5rem;
+        }
+        .top {
+          margin-bottom: 0.5rem;
+        }
+        .perfume_name {
+          font-size: 1.5rem;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="wrapper flex">
-      <div class="component flex">
-        <div class="product flex">
+    <main class="wrapper flex">
+      <section class="component flex">
+        <section class="product flex">
           <img
+            class="desktop"
             src="./images/image-product-desktop.jpg"
-            width="100% "
-            alt="product image"
+            alt="product desktop image"
           />
-        </div>
-        <div class="review">
+          <img
+            class="mobile"
+            src="./images/image-product-mobile.jpg"
+            alt="product mobile image"
+          />
+        </section>
+        <section class="review">
           <p class="top">Perfume</p>
           <div class="perfume_name">Gabrielle Essence Eau De Parfum</div>
           <p class="perfume_description">
@@ -138,9 +174,9 @@
             </svg>
             Add to Cart
           </button>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </main>
 
     <div class="attribution">
       Challenge by
