@@ -31,18 +31,21 @@
       }
       body {
         margin: 0;
+        background: hsl(30, 38%, 92%);
       }
       .flex {
         display: flex;
       }
       .wrapper {
-        background: hsl(30, 38%, 92%);
         height: 100vh;
         justify-content: center;
         align-items: center;
       }
+      .product {
+        min-width: 300px;
+      }
       .desktop {
-        width: 300px;
+        width: 100%;
         border-radius: 0.5rem 0rem 0rem 0.5rem;
       }
       .mobile {
@@ -52,12 +55,10 @@
         font-family: "Montserrat", sans-serif;
         width: 600px;
         border: none;
-        align-items: center;
-        justify-content: center;
       }
       .review {
         background: rgb(255, 255, 255);
-        width: 300px;
+        /* width: 300px; */
         padding: 1rem;
         font-size: 15px;
         border-radius: 0rem 0.5rem 0.5rem 0rem;
